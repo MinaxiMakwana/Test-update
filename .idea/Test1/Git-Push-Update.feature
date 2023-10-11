@@ -24,3 +24,10 @@ Feature: NopCommerce Register test cases Homework week 3 Minaxi Makwana
       | Ram      | Syam     | Abc@gmail.com |           | 123456           |  Registration unsuccessful |
       | Ram      | Syam     | Abc@gmail.com |  123456   |                  |  Registration unsuccessful |
       |          |          |               |           |                  |  Registration unsuccessful |
+
+  Scenario: 	User should not be able to click on both radio buttons
+    Given	  	User is in Register page
+    When		User click on "Male Radio button" on Male radio button
+    And			User click on "Female Radio button" on Female radio button
+    Then		User could not click on either of the radio button
+    And			User Could not Register
